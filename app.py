@@ -63,7 +63,7 @@ def carisurat(nomorsurat):
         data = "Surat ke : "+nomor_surat+"\nNama Surat : "+nama_surat+"\nAsma Surat : "+asma+"\nJumlah Ayat : "+ayat+"\nKeterangan : "+ket
         return data
 
-    elif(status == "error"):
+    else:
         return err
 
 # Post Request
