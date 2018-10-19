@@ -85,8 +85,9 @@ def handle_message(event):
     profile = line_bot_api.get_profile(sender)
 
 
-    line_bot_api.reply_message(event.reply_token, TextSendMessage(text= "yes"))
-
+    #line_bot_api.reply_message(event.reply_token, TextSendMessage(text= "yes"))
+    line_bot_api.reply_message(event.reply_token, TextSendMessage(text= carisurat(text))
+    
 import os
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
