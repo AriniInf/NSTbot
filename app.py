@@ -43,8 +43,9 @@ handler = WebhookHandler('e380402fa7f0185604728343907205d2')
 notes = {}
 
 #REQUEST NAMA SURAT
+
 def carisurat(nomorsurat):
-    URLsurat = "https://api.banghasan.com/quran/format/json/surat/"+nomorsurat+"/"+"pre"
+    URLsurat = "https://api.banghasan.com/quran/format/json/surat"+str(nomorsurat)+"/pre"
     r = requests.get(URLsurat)
     data = r.json()
     err = "data tidak ditemukan"
@@ -58,10 +59,10 @@ def carisurat(nomorsurat):
         arti = data['hasil'][0]['arti']
         ket = data['hasil'][0]['keterangan']
 
-        data = "Surat ke : "+nomor_surat+"\nNama Surat : "+nama_surat+"\nAsma Surat : "+asma+"\nJumlah Ayat : "+ayat+"\nKeterangan : "+ket
-        return data
+        data = "Surat ke : "+str(nomor_surat)+"\nNama Surat : "+nama_surat+"\nAsma Surat : "+asma+"\nJumlah Ayat : "+ayat+"\nKeterangan : "+keterangan
+       return data
 
-    else:
+    elif(status == "error"):
         return err
 
 # Post Request
