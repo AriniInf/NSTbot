@@ -46,7 +46,7 @@ notes = {}
 
 #REQUEST NAMA SURAT
 def carisurat(nomorsurat):
-    URLsurat = "https://api.banghasan.com/quran/format/json/surat"+nomorsurat+"/"+"pre"
+    URLsurat = "https://api.banghasan.com/quran/format/json/surat/"+nomorsurat+"/"+"pre"
     r = requests.get(URLsurat)
     data = r.json()
     err = "data tidak ditemukan"
