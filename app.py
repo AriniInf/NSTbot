@@ -86,7 +86,7 @@ def handle_message(event):
     profile = line_bot_api.get_profile(sender)
 
 
-    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=carisurat(data[0])))
+    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=carisurat(data[1])))
 
 import os
 if __name__ == "__main__":
